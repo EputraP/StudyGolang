@@ -1,0 +1,7 @@
+--------------------------Go CLI-------------------
+- go build     : compiles a bunch of code files
+- go run       : compiles and executes one or two files
+- go fmt       : formats all the code in each file in the current dierctory
+- go install   : compiles and install a package
+- go get       : downloads the raw source code of someone else's package
+- go test      : runs any test associated with current project

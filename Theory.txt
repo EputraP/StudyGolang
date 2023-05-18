@@ -29,4 +29,11 @@
 - fmt is the name of standard library package that is included with the go programming language by defualt
 - fmt used to print out a lot of different information specifically to the terminal
 
-
+------------------------- Variable Declaration ----------------
+- ex: var card string = "ace of spades"
+    > var  : create new Variable
+    > card : the name of the Variable
+    > string : only a "string" will ever be assigned to this Variable
+    > "ace of spades" : assign the value "ace of spades" to this Variable
+- or you can use syntax like this (but just to initialize the value)
+- card := "Ace of spades" 

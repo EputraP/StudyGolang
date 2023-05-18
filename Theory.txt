@@ -37,3 +37,38 @@
     > "ace of spades" : assign the value "ace of spades" to this Variable
 - or you can use syntax like this (but just to initialize the value)
 - card := "Ace of spades" 
+
+------------------------- Function Declaration ----------------
+- ex: func newCard() string {
+
+}
+    > newCard() : Define a function called "newCard"
+    > string : when executed, this function will return a value of type string
+
+------------------------- Slice and For Loops ----------------
+- Array : Fixed length list of things
+- Slice : An array that can grow or shrink
+- both array and slice must be defined with data type
+
+
+------------------------- For loops Declaration ----------------
+- ex: for index, card := range cards{
+    fmt.Println(card)
+}
+- index : index of this element in the array
+- card : current card we are iterating over
+- range cards: take the slice of cards and loop over it
+- fmt.Println() :  run this code one time for each card in the slice
+
+------------------------- Object Oriented Approach vs GO Approach  ----------------
+- Go is not an object oriented programming language
+- so it's not any idea classes inside of go
+- but go have a method to handle similar to Object oriented
+- the briefly flow like this:
+    > Go have some base go types (string, integer, float, array, map)
+    > we want to extend a base type and add some extra functionality to it
+    > so, we create "type deck []string"
+    > tell go we want to create an array of strings and add a bunch of functions specifically made to work with it
+    > create function like method in OO, "Functions with 'deck' as a 'receiver'"
+    > a function with a receiver is like a "method" - a function that belongs to an "instance"
+- see the picture to more details about GO approach to handle OO

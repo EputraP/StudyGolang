@@ -72,3 +72,12 @@
     > create function like method in OO, "Functions with 'deck' as a 'receiver'"
     > a function with a receiver is like a "method" - a function that belongs to an "instance"
 - see the picture to more details about GO approach to handle OO
+- func (d deck) print(){
+
+}
+    > any variable of type "deck" now gets access to the "print" method
+    > (d deck) is receiver
+    > receiver sets up methods on variable that we create
+    > d : the actual copy of the deck we are working with is available in the function as a variable called "d"
+    > deck: every variable of type "deck" can call this function on itself
+-

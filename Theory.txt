@@ -81,3 +81,93 @@
     > d : the actual copy of the deck we are working with is available in the function as a variable called "d"
     > deck: every variable of type "deck" can call this function on itself
 -
+
+------------------------- Tipe Data  ----------------
+- Tipe Data Number
+    > dua tipe data number
+        o Integer 
+        o Floating point
+    > tipe data integer
+        o int8
+            - min: -128
+            - max: 127
+        o int16
+            - min: -32768
+            - max: 32767
+        o int32
+            - min: -2147483648
+            - max: 2147483647
+        o int64
+            - min: -9223372036854775808
+            - max: 9223372036854775807
+        o uint8
+            - min: 0
+            - max: 255
+        o uint16
+            - min: 0
+            - max: 65535
+        o uint32
+            - min: 0
+            - max: 4294967295
+        o uint64
+            - min: 0
+            - max: 18446744073709551615
+    > tipe data Floating point
+        o float32
+            - min: 1.18x10^-38
+            - max: 3.4x10^38
+        o float64
+            - min: 2.23x10^-308
+            - max: 1.80x10^308
+        o complex64
+            - complex numbers with float32 real and imaginary parts
+        o complex128
+            - complex numbers with float64 real and imaginary parts  
+    > alias (defaultnya)
+        o byte
+            - alias untuk: uint8
+        o rune
+            - alias untuk: int32 
+        o int
+            - alias untuk: int32
+        o uint
+            - alias untuk: uint32
+- Tipe Data Boolean
+    > direpresentasikan dengan kata kunci "bool"
+- Tipe Data String
+    > direpresentasikan denga kata kunci "string"
+    > string golang selalu diawali dengan karakter " (petik dua) dan diakhiri dengan petik dua lagi
+    > function untuk string
+        o len("string")
+            - menghitung jumlah karakter di string
+        o "string"[number]
+            - mengambil karakter pada posisi yang ditentukan
+
+------------------------- variable ----------------
+- di golang, variable hanya bisa menyimpan tipe data yang sama, jika kita ingin menyimpan data yang berbeda beda jenis, kita haris membuat beberapa variable 
+- membuat variable dapat menggunakan kata kunci "var", lalu diikuti dengan nama variable dan tipe datanya
+    > contohnya: var namaOrang string
+- saat membuat variable, wajib menyebutkan tipe data dari variable tersebut. tapi kalo menginisialisasi nilai awal ke variablenya maka tidak wajib menyebutkan tipe data variablenya
+    > contohnya kalo tanpa inisialisasi awal:
+        - var namaOrang string
+        - namaOrang = "Namaku Budi"
+    > contohnya pake inisialisasi awal:
+        - var namaOrang = "Namaku Budi"
+    > contohnya pake inisialisasi awal tapi tetep declare tipe datanya (kalo gk dideclare tipe datanya bakal pake default int (int32)):
+        - var age int8 = 30
+- Kata kunci var
+    > kata kunci var saat membuat variable tidaklah wajib
+    > asalkan saat membuat variable, langsung menginisialisasi datanya
+    > agar tidak perlu menggunakan kata kunci var, perlu untuk menggunakan kata kunci ":=" saat menginisialisasikan data pada variable tersebut
+        - contohnya : contry := "Indonesia"
+        - terus mau ganti nilai countrynya nanti jadi gini, country = "america"
+- deklarasi multiple variable
+    > di golang kita bisa membuat variable secara sekaligus banyak
+    > code yang dibuat akan lebih bagus dan mudah dibaca
+        - contohnya: 
+        - var (
+            firstName = "Eka Putra"
+            lastName = "Prasetya"
+        )
+
+------------------------- constant ----------------

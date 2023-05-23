@@ -21,7 +21,6 @@ func main() {
 	// 	fmt.Println(i,card)
 	// }
 
-	
 	// cards1 := deck{"ace of diamonds", NewCard()}
 	// cards1 = append(cards1, "six of spades")
 	// cards1.print()
@@ -30,7 +29,7 @@ func main() {
 	// cards2 = append(cards1, "six of spades")
 	// cards2.print2()
 
-	cardsList := newDeck()
+	cardsList := deck.NewDeck()
 	cardList.print()
 
 }
@@ -38,6 +37,6 @@ func main() {
 func NewCard() string {
 	return "Five of Diamonds"
 }
-func NumberCard () int{
+func NumberCard() int {
 	return 4
 }

@@ -171,3 +171,110 @@
         )
 
 ------------------------- constant ----------------
+- deklarasi multiple constanta
+    > const (
+        firstname string = "Eka"
+        lastname = "Putra"
+    )
+------------------------- Type declaration ----------------
+- Type declaration adalah kemampuan untuk membuat ulang tipe data baru dari tipe data yang sudah ada
+- type declaration biasanya digunakan untuk membuat alias terhadap tipe data yang sudah ada, dengan tujuan agar lebih mudah dimengerti
+- contoh:
+    > type NoKTP string
+    > var ktpEka NoKTP = "32342441421"
+    > fmt.Println(ktpEka)
+
+------------------------- array ----------------
+- index array dimulai dari 0
+- contoh:
+    > var names [3]string
+    > names[0] = "Eka"
+    > names[1] = "Putra"
+    > names[2] = "Prasetya"
+- membuat array secara langsung
+- contoh:
+    > var values = [3]int{
+        90,98,97
+    }
+- function di array:
+    > len(array) : mendapatkan panjang array
+    > array[index] : mendapatkan data posisi array
+    > array[index] = value : mengubah data di posisi array
+
+------------------------- slice ----------------
+- tipe data slice adalah potongan dari data array
+- slice mirip dengan array, yang membedakan adalah ukuran slice bisa berubah
+- slide dan array selalu terkoneksi, dimana slice adalah data yang mengakses sebagian atau seluruh data array
+- tipe Data Slice memiliki 3 data, yaitu pointer, length, dan capacity
+- pointer adalah petunjuk data pertama di array pada slicer
+- length adalah panjang dari slice
+- capacity adlaah kapasitas dari slice, dimana length tidak boleh lebih dari capacity
+- membuat slice dari array
+    > array[low:high]   : membuat slice dari array dimulai index low sampai index sebelum high
+    > array[low:]       : membuat slide dari array dimulai index low sampai index akhir di array 
+    > array[:high]      : membuat slice dari array dimulai index 0 sampai index sebelum high
+    > array[:]          : membuat slice dari array dimulai index 0 sampai index akhir di array
+- contoh:
+    > misal punya array 12
+    > var monthList = [12]string{
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+    }
+    > array[4:7]
+        - artinya:
+            x pointer = 4
+            x length = 3 (4,5,6)
+            x capacity = 8 (4,5,6,7,8,9,10,11)
+    > array[6:9]
+        - artinya:
+            x pointer = 6
+            x length = 3 (6,7,8)
+            x capacity = 6 (6,7,8,9,10,11)
+- function slice
+    > len(slice)            : untuk mendapatkan panjang
+    > cap(slice)            : untuk mendapatkan kapasitas
+    > append(slice,data)    : membuat slice baru dengan menambah data ke posisi terakhir slice, jika kapasitas sudah penuh, maka akan membuat array baru
+    > make([]TypeData, length, capacity)    : membuat slice data
+    > copy(destination, source) : menyalin slice dari source ke destination
+- hati - hati saat membuat tipe data slice sama array
+    > iniArray := [...]int{1,2,3,4,5}
+    > iniSlice := []int{1,2,3,4,5}
+
+------------------------- tipe data map ----------------
+- map adalah tipe data lain yang berisikan kumpulan data yang sama, namun kita bisa menentukan jenis tipe data index yang akan digunakan
+- sederhananya, map adalah tipe data kumupan key-value, dimana kata kuncinya berisfat untuk, tidak boleh sama
+- berbeda dengan array dan slice, jumlah data yang kita masukkan ke dalam map boleh sebanyak banyaknya, asalkan kata kuncinya berbeda, jika kita gunakan kata kunci sama maka secar aotomatis data sebelumnya akan diganti dengan data yang baru
+- map ini JSON sih, atau kayak object di Javascript
+- contoh:
+    > person := map[string]string{
+        "name":"Eka",
+        "address":"Jogja"
+    }
+
+    person["email"] = "eputrap@gmail.com" // ini bakalan nambahin key
+    person["name"] = "Putra" // ini bakal gnti value dari key name
+
+    fmt.Println(person)
+    fmt.PrintLn(person["name"])
+    fmt.Println(person["address"])
+- penjelasan:
+    > tipe data di dalam [] itu untuk tipe data key
+    > tipe data di luar [] itu untuk tipe data value
+- function map
+    > len(Map)          : untuk mendapatkan jumlah data di map
+    > map[key]          : mengambil data di map dengan key
+    > map[key] = value  : mengubah data di map dengan key
+    > make(map[TypeKey]Typevalue)   : membuat map baru
+    > delete(map,key)   : menghapus data di map dengan key
+
+
